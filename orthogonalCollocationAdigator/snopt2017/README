@@ -1,0 +1,35 @@
+
+This directory contains the precompiled Matlab mexfiles for SNOPT and SQOPT.
+The mexfiles should be compatible with most versions of Matlab.
+
+--------------------------------------------------------------
+System                     Extension           Compiler
+--------------------------------------------------------------
+Linux                      *mexa64             gfortran 5.4
+Mac OS                     *mexmaci64-ifort    Intel ifort
+Mac OS                     *mexmaci64-gfort    gfortran
+Windows (32-bit Matlab)    *mexw32             VS/Intel
+Windows (64-bit Matlab)    *mexw64             VS/Intel
+
+
+----------------
+NOTES:
+----------------
+Linux and MacOS mex-files are built against the BLAS library included with Matlab.
+The Windows mex-files are built using the BLAS subroutines included with SNOPT.
+
+Please see http://ccom.ucsd.edu/~optimizers/ for information on compiling and using
+SNOPT in Matlab.
+
+
+----------------
+NOTES FOR MACOS:
+----------------
+For Mac OS, we provide Matlab files compiled with gfortran 4.3 and ifort, the Intel
+Fortran compiler.
+
+The gfortran version should be compatible with most versions of Matlab.
+The ifort    version should be compatible with Matlab versions: R2015a and later.
+
+You will also need to rename the precompiled mexfile by removing "-ifort" or "-gfort" in
+order to use it.
